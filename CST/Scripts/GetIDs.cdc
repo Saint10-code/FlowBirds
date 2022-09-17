@@ -10,3 +10,4 @@ pub fun main(user: Address): [UInt64] {
 
         return collection.getIDs()
 }
+
