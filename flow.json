@@ -1,0 +1,71 @@
+{
+	"networks": {
+		"emulator": "127.0.0.1:3569",
+		"mainnet": "access.mainnet.nodes.onflow.org:9000",
+		"testnet": "access.devnet.nodes.onflow.org:9000"
+	},
+
+	"accounts": {
+		"emulator-account": {
+			"address": "0xf8d6e0586b0a20c7",
+			"key": "5adb3af00423ba3f51eda4bc8a3dbcf4f44656bea75a370b8ac7f12f0129c5ca"
+		},
+	"testnet-account": {
+		"address": "0x03cb35230765e243",
+		"key": {
+		  "type": "hex",
+		  "index": 0,
+		  "signatureAlgorithm": "ECDSA_P256",
+		  "hashAlgorithm": "SHA3_256",
+		  "privateKey": "5fabd3ef1cd58fa24aa98071ad2363d501ba14389fdd16835ea6942e2466d01f"
+		}
+	  },
+
+	  "new-testnet-account": {
+		"address": "0x83794219c6f3bb51",
+		"key": {
+		  "type": "hex",
+		  "index": 0,
+		  "signatureAlgorithm": "ECDSA_P256",
+		  "hashAlgorithm": "SHA3_256",
+		  "privateKey": "b3b41863ccd9c33f1394e9c92a2d8403eb1ba5de2d034300e123e3073ed51640"
+		}
+		}
+	},
+	
+	
+	"contracts": {
+		"MetadataViews": "./CST/contracts/MetadataViews.cdc",
+		"FlowBirds": "./CST/Contracts/FlowBirds.cdc",
+		"NonFungibleToken": {
+			"source": "./CST/Contracts/NonFungibleToken.cdc", 
+			"aliases": {
+				"emulator": "0xf8d6e0586b0a20c7",
+				"testnet": "0x03cb35230765e243"
+			  }	
+		  },
+		  "FungibleToken": {
+			"source": "./contracts/utility/FungibleToken.cdc",
+			"aliases": {
+			  "emulator": "0xf8d6e0586b0a20c7",
+			  "testnet": "0x03cb35230765e243"
+			}
+		  }
+		},
+
+	"deployments": {
+	  "testnet": {
+		"testnet-account": [
+		  "NonFungibleToken", "FlowBirds"
+		]
+	  }
+	}
+	}
+
+
+
+
+
+
+
+
